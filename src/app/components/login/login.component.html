@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 login-form-container">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="h-100 w-100 d-flex flex-column justify-content-around align-items-center">
+        <div class="controls-container">
+          <input
+            type="text"
+            class="form-control mb-2"
+            placeholder="Enter User Name"
+            formControlName="userName"
+          />
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter Password"
+            formControlName="password"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn btn-outline-primary"
+          [disabled]="loginForm.invalid"
+        >
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
